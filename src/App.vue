@@ -77,13 +77,13 @@ export default {
         { img: "static/1999.png", title: "1999现金" },
         { img: "static/999.png", title: "999现金" },
         {
-          img: "static/jqr.png",
-          title: "扫地机器人"
+          img: "static/kx.png",
+          title: "烤箱"
         },
         { img: "static/qjf.png", title: "全家福" },
         {
-          img: "static/jhq.png",
-          title: "空气净化器"
+          img: "static/nh.png",
+          title: "春节大礼包"
         }
       ], //奖品1-9
       index: -1, // 当前转动到哪个位置，起点位置
@@ -159,27 +159,10 @@ export default {
         } else if (this.times === this.cycle) {
           const index = parseInt(Math.random() * 100, 0) || 0; // 随机获得一个中奖位置
           // this.prize = index; //中奖位置,可由后台返回
-          console.log(index);
-          //设置3等奖，概率小于5%，奖励<=2
-          //if (index <= 5 && this.p3 > 0) {
-          //5% 限定数量，如果数量没了，那么使用|| 符号吧概率给别的奖品
-          //  this.prize = 3;
-          //  this.p3--;
-          //抽中后发给后台存起来
-          // } else if (index > 5 && index <= 25) {
-          //20%4等奖
-          // this.prize = 4;
-          //} else if (index > 25 && index <= 55) {
-          //this.prize = 5;
-          //} else if (index > 55 && index <= 85) {
-          //  this.prize = 6;
-          // } else {
-          //不管是某个奖品抽光还是剩下的15%概率，都算作else
-          //    this.prize = 7;
-          //}
-
-          if (index <= 60) {
+          if (index <= 40) {
             this.prize = 5;
+          } else if (index > 40 && index <= 100) {
+            this.prize = 7;
           } else {
             this.prize = 7;
           }
@@ -225,8 +208,7 @@ export default {
     //     console.log(res, "success"); // 成功的返回
     //   })
     //   .catch(error => console.log(error, "error")); // 失败的返回
-
-    setTimeout(this.test, 1);
+    // setTimeout(this.test, 1);
   }
 };
 </script>
@@ -255,7 +237,7 @@ export default {
 }
 
 /* iphonex */
-@media (max-width: 420px)and (min-height:700px) {
+@media (max-width: 420px) and (min-height: 700px) {
   #titleFont {
     width: 100%;
     margin: 120px 0 10px;
