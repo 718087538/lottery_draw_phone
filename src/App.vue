@@ -178,7 +178,7 @@ export default {
           //    this.prize = 7;
           //}
 
-          if (index <= 60) {
+          if (index <= 50) {
             this.prize = 5;
           } else {
             this.prize = 7;
