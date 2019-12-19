@@ -131,7 +131,6 @@ export default {
       }
       //通过了上面的代表刚开始点击，不在抽奖中
       this.canPress = true;
-
       this.startRoll();
     },
     // 开始转动
